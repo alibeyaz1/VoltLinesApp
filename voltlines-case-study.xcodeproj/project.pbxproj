@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7D251F9C2A58B1230041E5EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D251F9B2A58B1230041E5EC /* AppDelegate.swift */; };
-		7D251F9E2A58B1230041E5EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D251F9D2A58B1230041E5EC /* SceneDelegate.swift */; };
 		7D251FA02A58B1230041E5EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D251F9F2A58B1230041E5EC /* ViewController.swift */; };
-		7D251FA32A58B1230041E5EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D251FA12A58B1230041E5EC /* Main.storyboard */; };
 		7D251FA62A58B1230041E5EC /* voltlines_case_study.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7D251FA42A58B1230041E5EC /* voltlines_case_study.xcdatamodeld */; };
 		7D251FA82A58B1240041E5EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D251FA72A58B1240041E5EC /* Assets.xcassets */; };
 		7D251FAB2A58B1240041E5EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D251FA92A58B1240041E5EC /* LaunchScreen.storyboard */; };
@@ -19,9 +17,7 @@
 /* Begin PBXFileReference section */
 		7D251F982A58B1230041E5EC /* voltlines-case-study.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "voltlines-case-study.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D251F9B2A58B1230041E5EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7D251F9D2A58B1230041E5EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7D251F9F2A58B1230041E5EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7D251FA22A58B1230041E5EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7D251FA52A58B1230041E5EC /* voltlines_case_study.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = voltlines_case_study.xcdatamodel; sourceTree = "<group>"; };
 		7D251FA72A58B1240041E5EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D251FAA2A58B1240041E5EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,9 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				7D251F9B2A58B1230041E5EC /* AppDelegate.swift */,
-				7D251F9D2A58B1230041E5EC /* SceneDelegate.swift */,
 				7D251F9F2A58B1230041E5EC /* ViewController.swift */,
-				7D251FA12A58B1230041E5EC /* Main.storyboard */,
 				7D251FA72A58B1240041E5EC /* Assets.xcassets */,
 				7D251FA92A58B1240041E5EC /* LaunchScreen.storyboard */,
 				7D251FAC2A58B1240041E5EC /* Info.plist */,
@@ -130,7 +124,6 @@
 			files = (
 				7D251FAB2A58B1240041E5EC /* LaunchScreen.storyboard in Resources */,
 				7D251FA82A58B1240041E5EC /* Assets.xcassets in Resources */,
-				7D251FA32A58B1230041E5EC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,21 +137,12 @@
 				7D251FA62A58B1230041E5EC /* voltlines_case_study.xcdatamodeld in Sources */,
 				7D251FA02A58B1230041E5EC /* ViewController.swift in Sources */,
 				7D251F9C2A58B1230041E5EC /* AppDelegate.swift in Sources */,
-				7D251F9E2A58B1230041E5EC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7D251FA12A58B1230041E5EC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7D251FA22A58B1230041E5EC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7D251FA92A58B1240041E5EC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -296,7 +280,6 @@
 				INFOPLIST_FILE = "voltlines-case-study/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -324,7 +307,6 @@
 				INFOPLIST_FILE = "voltlines-case-study/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
