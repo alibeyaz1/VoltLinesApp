@@ -12,6 +12,8 @@
 		7D251FA62A58B1230041E5EC /* voltlines_case_study.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7D251FA42A58B1230041E5EC /* voltlines_case_study.xcdatamodeld */; };
 		7D251FA82A58B1240041E5EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D251FA72A58B1240041E5EC /* Assets.xcassets */; };
 		7D251FAB2A58B1240041E5EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D251FA92A58B1240041E5EC /* LaunchScreen.storyboard */; };
+		7D251FB42A58B40F0041E5EC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7D251FB32A58B40F0041E5EC /* SnapKit */; };
+		7DA596772A58B55E00CF304B /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA596762A58B55E00CF304B /* UIColor+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,7 @@
 		7D251FA72A58B1240041E5EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D251FAA2A58B1240041E5EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D251FAC2A58B1240041E5EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DA596762A58B55E00CF304B /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D251FB42A58B40F0041E5EC /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,14 +58,79 @@
 		7D251F9A2A58B1230041E5EC /* voltlines-case-study */ = {
 			isa = PBXGroup;
 			children = (
-				7D251F9B2A58B1230041E5EC /* AppDelegate.swift */,
-				7D251F9F2A58B1230041E5EC /* ViewController.swift */,
+				7DA596752A58B51E00CF304B /* App */,
+				7DA596742A58B51700CF304B /* Model */,
+				7DA596732A58B50F00CF304B /* Constants */,
+				7DA596722A58B50800CF304B /* Manager */,
+				7DA596712A58B4FF00CF304B /* View */,
+				7DA596702A58B4F800CF304B /* Scene */,
+				7DA5966E2A58B4EA00CF304B /* Resources */,
+				7DA5966D2A58B4E200CF304B /* Extensions */,
+			);
+			path = "voltlines-case-study";
+			sourceTree = "<group>";
+		};
+		7DA5966D2A58B4E200CF304B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7DA596762A58B55E00CF304B /* UIColor+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7DA5966E2A58B4EA00CF304B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				7D251FA72A58B1240041E5EC /* Assets.xcassets */,
 				7D251FA92A58B1240041E5EC /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7DA596702A58B4F800CF304B /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				7D251F9F2A58B1230041E5EC /* ViewController.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		7DA596712A58B4FF00CF304B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		7DA596722A58B50800CF304B /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		7DA596732A58B50F00CF304B /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		7DA596742A58B51700CF304B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7DA596752A58B51E00CF304B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				7D251F9B2A58B1230041E5EC /* AppDelegate.swift */,
 				7D251FAC2A58B1240041E5EC /* Info.plist */,
 				7D251FA42A58B1230041E5EC /* voltlines_case_study.xcdatamodeld */,
 			);
-			path = "voltlines-case-study";
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,6 +149,9 @@
 			dependencies = (
 			);
 			name = "voltlines-case-study";
+			packageProductDependencies = (
+				7D251FB32A58B40F0041E5EC /* SnapKit */,
+			);
 			productName = "voltlines-case-study";
 			productReference = 7D251F982A58B1230041E5EC /* voltlines-case-study.app */;
 			productType = "com.apple.product-type.application";
@@ -108,6 +180,9 @@
 				Base,
 			);
 			mainGroup = 7D251F8F2A58B1230041E5EC;
+			packageReferences = (
+				7D251FB22A58B40F0041E5EC /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 7D251F992A58B1230041E5EC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,6 +212,7 @@
 				7D251FA62A58B1230041E5EC /* voltlines_case_study.xcdatamodeld in Sources */,
 				7D251FA02A58B1230041E5EC /* ViewController.swift in Sources */,
 				7D251F9C2A58B1230041E5EC /* AppDelegate.swift in Sources */,
+				7DA596772A58B55E00CF304B /* UIColor+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +353,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q876622H6W;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "voltlines-case-study/Info.plist";
+				INFOPLIST_FILE = "voltlines-case-study/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -304,7 +380,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q876622H6W;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "voltlines-case-study/Info.plist";
+				INFOPLIST_FILE = "voltlines-case-study/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -344,6 +420,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7D251FB22A58B40F0041E5EC /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7D251FB32A58B40F0041E5EC /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7D251FB22A58B40F0041E5EC /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		7D251FA42A58B1230041E5EC /* voltlines_case_study.xcdatamodeld */ = {
