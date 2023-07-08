@@ -8,6 +8,26 @@
 import Foundation
 import UIKit
 
+//struct Trip: Codable {
+//    var busName: String?
+//    var idBus: Int?
+//    var time: String?
+//    
+//    enum CodingKeys: String, CodingKey {
+//        case busName = "bus_name"
+//        case idBus = "id"
+//        case time = "time"
+//    }
+//    
+//    init(from decoder: Decoder) throws {
+//        let values = try decoder.container(keyedBy: CodingKeys.self)
+//        busName = try values.decodeIfPresent(String.self, forKey: .busName)
+//        idBus = try values.decodeIfPresent(Int.self, forKey: .idBus)
+//        time = try values.decodeIfPresent(String.self, forKey: .time)
+//    }
+//}
+
+
 public class Trip: Codable {
     public var idBus: Int
     public var busName: String

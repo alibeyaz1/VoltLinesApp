@@ -21,6 +21,10 @@
 		7DA596822A59687A00CF304B /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA596812A59687A00CF304B /* Trip.swift */; };
 		7DA596842A59696E00CF304B /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA596832A59696E00CF304B /* Globals.swift */; };
 		7DA596862A59747F00CF304B /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA596852A59747F00CF304B /* CustomButton.swift */; };
+		7DA596882A5979D000CF304B /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA596872A5979D000CF304B /* MapVC.swift */; };
+		7DA5968A2A59838700CF304B /* MapStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA596892A59838700CF304B /* MapStation.swift */; };
+		7DA5968C2A598D1C00CF304B /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5968B2A598D1C00CF304B /* Annotation.swift */; };
+		7DA5968E2A59C78F00CF304B /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5968D2A59C78F00CF304B /* MapManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		7DA596812A59687A00CF304B /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		7DA596832A59696E00CF304B /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		7DA596852A59747F00CF304B /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		7DA596872A5979D000CF304B /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		7DA596892A59838700CF304B /* MapStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapStation.swift; sourceTree = "<group>"; };
+		7DA5968B2A598D1C00CF304B /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
+		7DA5968D2A59C78F00CF304B /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				7D251F9F2A58B1230041E5EC /* ListTripVC.swift */,
+				7DA596872A5979D000CF304B /* MapVC.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -122,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				7DA5967A2A594AF300CF304B /* APIManager.swift */,
+				7DA5968D2A59C78F00CF304B /* MapManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -138,6 +148,8 @@
 			children = (
 				7DA5967F2A59676A00CF304B /* Station.swift */,
 				7DA596812A59687A00CF304B /* Trip.swift */,
+				7DA596892A59838700CF304B /* MapStation.swift */,
+				7DA5968B2A598D1C00CF304B /* Annotation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -234,8 +246,12 @@
 				7DA5967B2A594AF300CF304B /* APIManager.swift in Sources */,
 				7D251FA62A58B1230041E5EC /* voltlines_case_study.xcdatamodeld in Sources */,
 				7D251FA02A58B1230041E5EC /* ListTripVC.swift in Sources */,
+				7DA5968A2A59838700CF304B /* MapStation.swift in Sources */,
+				7DA5968E2A59C78F00CF304B /* MapManager.swift in Sources */,
+				7DA5968C2A598D1C00CF304B /* Annotation.swift in Sources */,
 				7DA596792A59393900CF304B /* ListTripTableViewCell.swift in Sources */,
 				7DA596862A59747F00CF304B /* CustomButton.swift in Sources */,
+				7DA596882A5979D000CF304B /* MapVC.swift in Sources */,
 				7DA596822A59687A00CF304B /* Trip.swift in Sources */,
 				7D251F9C2A58B1230041E5EC /* AppDelegate.swift in Sources */,
 				7DA596802A59676A00CF304B /* Station.swift in Sources */,

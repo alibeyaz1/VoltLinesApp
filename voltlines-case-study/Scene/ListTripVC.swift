@@ -11,6 +11,8 @@ import SnapKit
 class ListTripVC: UIViewController {
     let tableView = UITableView()
     var data: [String] = ["Bus 1", "Bus 2", "Bus 3"]
+    var line = MapStation()
+
     
     override func viewDidLoad() {
         setupUI()
