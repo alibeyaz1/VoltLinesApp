@@ -16,6 +16,11 @@
 		7DA596772A58B55E00CF304B /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA596762A58B55E00CF304B /* UIColor+Extensions.swift */; };
 		7DA596792A59393900CF304B /* ListTripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA596782A59393900CF304B /* ListTripTableViewCell.swift */; };
 		7DA5967B2A594AF300CF304B /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5967A2A594AF300CF304B /* APIManager.swift */; };
+		7DA5967E2A59669900CF304B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7DA5967D2A59669900CF304B /* Alamofire */; };
+		7DA596802A59676A00CF304B /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5967F2A59676A00CF304B /* Station.swift */; };
+		7DA596822A59687A00CF304B /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA596812A59687A00CF304B /* Trip.swift */; };
+		7DA596842A59696E00CF304B /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA596832A59696E00CF304B /* Globals.swift */; };
+		7DA596862A59747F00CF304B /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA596852A59747F00CF304B /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +34,10 @@
 		7DA596762A58B55E00CF304B /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		7DA596782A59393900CF304B /* ListTripTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTripTableViewCell.swift; sourceTree = "<group>"; };
 		7DA5967A2A594AF300CF304B /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		7DA5967F2A59676A00CF304B /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		7DA596812A59687A00CF304B /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		7DA596832A59696E00CF304B /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		7DA596852A59747F00CF304B /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +46,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D251FB42A58B40F0041E5EC /* SnapKit in Frameworks */,
+				7DA5967E2A59669900CF304B /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				7DA596782A59393900CF304B /* ListTripTableViewCell.swift */,
+				7DA596852A59747F00CF304B /* CustomButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -125,6 +136,8 @@
 		7DA596742A58B51700CF304B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7DA5967F2A59676A00CF304B /* Station.swift */,
+				7DA596812A59687A00CF304B /* Trip.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -135,6 +148,7 @@
 				7D251F9B2A58B1230041E5EC /* AppDelegate.swift */,
 				7D251FAC2A58B1240041E5EC /* Info.plist */,
 				7D251FA42A58B1230041E5EC /* voltlines_case_study.xcdatamodeld */,
+				7DA596832A59696E00CF304B /* Globals.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -157,6 +171,7 @@
 			name = "voltlines-case-study";
 			packageProductDependencies = (
 				7D251FB32A58B40F0041E5EC /* SnapKit */,
+				7DA5967D2A59669900CF304B /* Alamofire */,
 			);
 			productName = "voltlines-case-study";
 			productReference = 7D251F982A58B1230041E5EC /* voltlines-case-study.app */;
@@ -188,6 +203,7 @@
 			mainGroup = 7D251F8F2A58B1230041E5EC;
 			packageReferences = (
 				7D251FB22A58B40F0041E5EC /* XCRemoteSwiftPackageReference "SnapKit" */,
+				7DA5967C2A59669900CF304B /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 7D251F992A58B1230041E5EC /* Products */;
 			projectDirPath = "";
@@ -219,8 +235,12 @@
 				7D251FA62A58B1230041E5EC /* voltlines_case_study.xcdatamodeld in Sources */,
 				7D251FA02A58B1230041E5EC /* ListTripVC.swift in Sources */,
 				7DA596792A59393900CF304B /* ListTripTableViewCell.swift in Sources */,
+				7DA596862A59747F00CF304B /* CustomButton.swift in Sources */,
+				7DA596822A59687A00CF304B /* Trip.swift in Sources */,
 				7D251F9C2A58B1230041E5EC /* AppDelegate.swift in Sources */,
+				7DA596802A59676A00CF304B /* Station.swift in Sources */,
 				7DA596772A58B55E00CF304B /* UIColor+Extensions.swift in Sources */,
+				7DA596842A59696E00CF304B /* Globals.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +458,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		7DA5967C2A59669900CF304B /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -445,6 +473,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7D251FB22A58B40F0041E5EC /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		7DA5967D2A59669900CF304B /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7DA5967C2A59669900CF304B /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 
