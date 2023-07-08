@@ -8,23 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		7D251F9C2A58B1230041E5EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D251F9B2A58B1230041E5EC /* AppDelegate.swift */; };
-		7D251FA02A58B1230041E5EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D251F9F2A58B1230041E5EC /* ViewController.swift */; };
+		7D251FA02A58B1230041E5EC /* ListTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D251F9F2A58B1230041E5EC /* ListTripVC.swift */; };
 		7D251FA62A58B1230041E5EC /* voltlines_case_study.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7D251FA42A58B1230041E5EC /* voltlines_case_study.xcdatamodeld */; };
 		7D251FA82A58B1240041E5EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D251FA72A58B1240041E5EC /* Assets.xcassets */; };
 		7D251FAB2A58B1240041E5EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D251FA92A58B1240041E5EC /* LaunchScreen.storyboard */; };
 		7D251FB42A58B40F0041E5EC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7D251FB32A58B40F0041E5EC /* SnapKit */; };
 		7DA596772A58B55E00CF304B /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA596762A58B55E00CF304B /* UIColor+Extensions.swift */; };
+		7DA596792A59393900CF304B /* ListTripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA596782A59393900CF304B /* ListTripTableViewCell.swift */; };
+		7DA5967B2A594AF300CF304B /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5967A2A594AF300CF304B /* APIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7D251F982A58B1230041E5EC /* voltlines-case-study.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "voltlines-case-study.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D251F9B2A58B1230041E5EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7D251F9F2A58B1230041E5EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7D251F9F2A58B1230041E5EC /* ListTripVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTripVC.swift; sourceTree = "<group>"; };
 		7D251FA52A58B1230041E5EC /* voltlines_case_study.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = voltlines_case_study.xcdatamodel; sourceTree = "<group>"; };
 		7D251FA72A58B1240041E5EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D251FAA2A58B1240041E5EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D251FAC2A58B1240041E5EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DA596762A58B55E00CF304B /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		7DA596782A59393900CF304B /* ListTripTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTripTableViewCell.swift; sourceTree = "<group>"; };
+		7DA5967A2A594AF300CF304B /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +94,7 @@
 		7DA596702A58B4F800CF304B /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				7D251F9F2A58B1230041E5EC /* ViewController.swift */,
+				7D251F9F2A58B1230041E5EC /* ListTripVC.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -98,6 +102,7 @@
 		7DA596712A58B4FF00CF304B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7DA596782A59393900CF304B /* ListTripTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -105,6 +110,7 @@
 		7DA596722A58B50800CF304B /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				7DA5967A2A594AF300CF304B /* APIManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -209,8 +215,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DA5967B2A594AF300CF304B /* APIManager.swift in Sources */,
 				7D251FA62A58B1230041E5EC /* voltlines_case_study.xcdatamodeld in Sources */,
-				7D251FA02A58B1230041E5EC /* ViewController.swift in Sources */,
+				7D251FA02A58B1230041E5EC /* ListTripVC.swift in Sources */,
+				7DA596792A59393900CF304B /* ListTripTableViewCell.swift in Sources */,
 				7D251F9C2A58B1230041E5EC /* AppDelegate.swift in Sources */,
 				7DA596772A58B55E00CF304B /* UIColor+Extensions.swift in Sources */,
 			);
