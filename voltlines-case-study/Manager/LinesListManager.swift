@@ -1,6 +1,6 @@
 //
 //  LinesListManager.swift
-// voltlines-case-study
+//  voltlines-case-study
 //
 //  Created by Ali Beyaz on 07.07.2023.
 //
@@ -9,11 +9,11 @@ import Foundation
 
 class LinesListManager {
     
-    var didListUpdated: (() -> Void)?
-    var didBookedTrip: ((Int) -> Void)?
-    var didFailedBookTrip: (() -> Void)?
+    var didListUpdated: (() -> Void)? // Closure called when the list is updated
+    var didBookedTrip: ((Int) -> Void)? // Closure called when a trip is successfully booked
+    var didFailedBookTrip: (() -> Void)? // Closure called when booking a trip fails
     
-    var didFetchedStationList: (([MapStation]) -> Void)?
+    var didFetchedStationList: (([MapStation]) -> Void)? // Closure called when the station list is fetched
     
     var sectionListSource = [LinesListSection]()
     var selectedTrips = MapStation()
@@ -23,27 +23,24 @@ class LinesListManager {
             var list = [LinesListSection]()
             
             for (index, item) in trips.enumerated() {
-                list.append(LinesListSection(type: .spacing, items: [4]))
-                list.append(LinesListSection(type: .route, items: [
+                // Create line items for each trip
+                list.append(LinesListSection(items: [
                     LineItem(id: item.id, lineName: item.bus_name, lineTime: item.time)]))
-                
-                if index < trips.count {
-                    list.append(LinesListSection(type: .spacing, items: [4]))
-                    list.append(LinesListSection(type: .line, items: [""]))
-                }
             }
+            
             self.sectionListSource = list
             self.didListUpdated?()
         }
     }
     
     func bookSelectedTrip(_ id: Int) {
+        // Book a selected trip using the API manager
         APIManager.sharedManager.bookingTrip(route: selectedTrips.id ?? 0, station: id) { (response) in
             if let id = response.id, id != 0 {
-                self.didBookedTrip?(id)
+                self.didBookedTrip?(id) // Notify successful booking
             }
         } errorHandler: { (error) in
-            self.didFailedBookTrip?()
+            self.didFailedBookTrip?() // Notify failed booking
         }
     }
 }
@@ -53,7 +50,7 @@ extension LinesListManager {
         let data = self.sectionListSource[section]
         if let itemCount = data.itemCount {
             return itemCount
-        }else {
+        } else {
             return data.items?.count ?? 0
         }
     }

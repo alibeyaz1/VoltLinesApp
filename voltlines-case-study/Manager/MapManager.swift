@@ -17,6 +17,7 @@ class MapManager {
     var bookedTrip = Int()
     var bookedStation: TripItem?
     
+    /// Fetches the list of station lines.
     func fetchLinesList() {
         APIManager.sharedManager.getStationList { (response) in
             if response.count > 0 {
@@ -32,7 +33,6 @@ class MapManager {
                         trips: stationItem.trips,
                         booked: (stationItem.trips?.first(where: {$0.id == self.bookedTrip}) != nil)
                     )
-                    
                 }
                 self.coordinatesList = stationList
                 self.didFetchedCoordinates?(stationList)
@@ -42,12 +42,17 @@ class MapManager {
         }
     }
     
+    /// Notifies that a line has been selected.
+    /// - Parameter id: The ID of the selected line.
     func didSelectedLine(_ id: Int) {
         if let selectedTrip = coordinatesList.first(where: {$0.id == id}) {
             self.didSelectedLine?(selectedTrip)
         }
     }
     
+    /// Fetches the coordinates of the selected station.
+    /// - Parameter id: The ID of the selected station.
+    /// - Returns: The CLLocation object representing the coordinates of the selected station.
     func fetchSelectedStationCoords(_ id: Int) -> CLLocation {
         if bookedStation != nil, let bookedId = bookedStation?.id {
             if let bookedCoords = self.coordinatesList.first(where: {$0.id == bookedId})?.coordinates {
@@ -58,4 +63,5 @@ class MapManager {
         }
         return CLLocation()
     }
+    
 }

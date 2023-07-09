@@ -13,16 +13,16 @@ import UIKit
 
 class LineItemCell: VoltLinesTableViewCell {
     
-    lazy var lblLineName = createLabel(color: .mainBottomColor, font: UIFont(name: "Helvetica Neue", size: 16.0) ?? UIFont(), textAlign: .left)
-    lazy var lblLineTime = createLabel(color: .mainBottomColor, font: UIFont(name: "Helvetica Neue", size: 16.0) ?? UIFont(), textAlign: .left)
+    lazy var lblLineName = createLabel(color: .black, font: UIFont(name: "Helvetica Neue", size: 16.0) ?? UIFont(), textAlign: .left)
+    lazy var lblLineTime = createLabel(color: .black, font: UIFont(name: "Helvetica Neue", size: 16.0) ?? UIFont(), textAlign: .left)
     
     let btnBook: UIButton = {
         let btn = UIButton()
         btn.setTitle("Book", for: .normal)
         btn.setTitleColor(UIColor.white, for: .normal)
         btn.titleLabel?.font = UIFont(name: "Helvetica Neue", size: 12.0)
-        btn.backgroundColor = .blue
-        btn.layer.cornerRadius = 8
+        btn.backgroundColor = .clrBlue
+        btn.layer.cornerRadius = 18
         return btn
     }()
     

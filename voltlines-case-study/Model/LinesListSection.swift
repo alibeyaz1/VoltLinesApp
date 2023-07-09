@@ -8,12 +8,11 @@
 import UIKit
 
 class LinesListSection {
-    var type: LinesListSectionType
+
     var items: [Any]?
     var itemCount: Int?
     
-    init(type: LinesListSectionType, items: [Any]? = nil, itemCount: Int? = nil) {
-        self.type = type
+    init( items: [Any]? = nil, itemCount: Int? = nil) {
         self.items = items
         self.itemCount = itemCount
     }
