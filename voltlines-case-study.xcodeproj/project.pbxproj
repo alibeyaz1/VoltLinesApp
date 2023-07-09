@@ -8,44 +8,68 @@
 
 /* Begin PBXBuildFile section */
 		7D251F9C2A58B1230041E5EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D251F9B2A58B1230041E5EC /* AppDelegate.swift */; };
-		7D251FA02A58B1230041E5EC /* ListTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D251F9F2A58B1230041E5EC /* ListTripVC.swift */; };
 		7D251FA62A58B1230041E5EC /* voltlines_case_study.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7D251FA42A58B1230041E5EC /* voltlines_case_study.xcdatamodeld */; };
 		7D251FA82A58B1240041E5EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D251FA72A58B1240041E5EC /* Assets.xcassets */; };
 		7D251FAB2A58B1240041E5EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D251FA92A58B1240041E5EC /* LaunchScreen.storyboard */; };
 		7D251FB42A58B40F0041E5EC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7D251FB32A58B40F0041E5EC /* SnapKit */; };
 		7DA596772A58B55E00CF304B /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA596762A58B55E00CF304B /* UIColor+Extensions.swift */; };
-		7DA596792A59393900CF304B /* ListTripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA596782A59393900CF304B /* ListTripTableViewCell.swift */; };
-		7DA5967B2A594AF300CF304B /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5967A2A594AF300CF304B /* APIManager.swift */; };
 		7DA5967E2A59669900CF304B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7DA5967D2A59669900CF304B /* Alamofire */; };
-		7DA596802A59676A00CF304B /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5967F2A59676A00CF304B /* Station.swift */; };
-		7DA596822A59687A00CF304B /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA596812A59687A00CF304B /* Trip.swift */; };
-		7DA596842A59696E00CF304B /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA596832A59696E00CF304B /* Globals.swift */; };
-		7DA596862A59747F00CF304B /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA596852A59747F00CF304B /* CustomButton.swift */; };
-		7DA596882A5979D000CF304B /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA596872A5979D000CF304B /* MapVC.swift */; };
-		7DA5968A2A59838700CF304B /* MapStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA596892A59838700CF304B /* MapStation.swift */; };
-		7DA5968C2A598D1C00CF304B /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5968B2A598D1C00CF304B /* Annotation.swift */; };
-		7DA5968E2A59C78F00CF304B /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5968D2A59C78F00CF304B /* MapManager.swift */; };
+		7DA7A0672A5AB39D0034AB45 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA7A04E2A5AB39D0034AB45 /* MapManager.swift */; };
+		7DA7A0682A5AB39D0034AB45 /* MapStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA7A0502A5AB39D0034AB45 /* MapStation.swift */; };
+		7DA7A0692A5AB39D0034AB45 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA7A0512A5AB39D0034AB45 /* Annotation.swift */; };
+		7DA7A06A2A5AB39D0034AB45 /* ListButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA7A0542A5AB39D0034AB45 /* ListButton.swift */; };
+		7DA7A06B2A5AB39D0034AB45 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA7A0562A5AB39D0034AB45 /* MapViewController.swift */; };
+		7DA7A06C2A5AB39D0034AB45 /* LinesListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA7A0592A5AB39D0034AB45 /* LinesListManager.swift */; };
+		7DA7A06D2A5AB39D0034AB45 /* ListLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA7A05C2A5AB39D0034AB45 /* ListLineCell.swift */; };
+		7DA7A06E2A5AB39D0034AB45 /* LineItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA7A05E2A5AB39D0034AB45 /* LineItemCell.swift */; };
+		7DA7A06F2A5AB39D0034AB45 /* LinesListSpacingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA7A0602A5AB39D0034AB45 /* LinesListSpacingCell.swift */; };
+		7DA7A0702A5AB39D0034AB45 /* LineItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA7A0622A5AB39D0034AB45 /* LineItem.swift */; };
+		7DA7A0712A5AB39D0034AB45 /* LinesListSectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA7A0632A5AB39D0034AB45 /* LinesListSectionType.swift */; };
+		7DA7A0722A5AB39D0034AB45 /* LinesListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA7A0642A5AB39D0034AB45 /* LinesListSection.swift */; };
+		7DA7A0732A5AB39D0034AB45 /* LinesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA7A0662A5AB39D0034AB45 /* LinesListViewController.swift */; };
+		7DA7A07A2A5AB3C10034AB45 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA7A0762A5AB3C10034AB45 /* APIManager.swift */; };
+		7DA7A07B2A5AB3C10034AB45 /* BookingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA7A0782A5AB3C10034AB45 /* BookingResponse.swift */; };
+		7DA7A07C2A5AB3C10034AB45 /* StationsListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA7A0792A5AB3C10034AB45 /* StationsListResponse.swift */; };
+		7DA7A08F2A5AB3CC0034AB45 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA7A0852A5AB3CC0034AB45 /* UIColor.swift */; };
+		7DA7A0902A5AB3CC0034AB45 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA7A0862A5AB3CC0034AB45 /* Extensions.swift */; };
+		7DA7A0912A5AB3CC0034AB45 /* GenericAlertDialogUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA7A0882A5AB3CC0034AB45 /* GenericAlertDialogUtils.swift */; };
+		7DA7A0922A5AB3CC0034AB45 /* GenericAlertDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA7A0892A5AB3CC0034AB45 /* GenericAlertDialogView.swift */; };
+		7DA7A0962A5AB3D40034AB45 /* VoltLinesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA7A0942A5AB3D40034AB45 /* VoltLinesTableViewCell.swift */; };
+		7DA7A0972A5AB3D40034AB45 /* VoltLinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA7A0952A5AB3D40034AB45 /* VoltLinesViewController.swift */; };
+		7DA7A0992A5AB4BF0034AB45 /* WindowHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA7A0982A5AB4BF0034AB45 /* WindowHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7D251F982A58B1230041E5EC /* voltlines-case-study.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "voltlines-case-study.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D251F9B2A58B1230041E5EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7D251F9F2A58B1230041E5EC /* ListTripVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTripVC.swift; sourceTree = "<group>"; };
 		7D251FA52A58B1230041E5EC /* voltlines_case_study.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = voltlines_case_study.xcdatamodel; sourceTree = "<group>"; };
 		7D251FA72A58B1240041E5EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D251FAA2A58B1240041E5EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D251FAC2A58B1240041E5EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DA596762A58B55E00CF304B /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
-		7DA596782A59393900CF304B /* ListTripTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTripTableViewCell.swift; sourceTree = "<group>"; };
-		7DA5967A2A594AF300CF304B /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
-		7DA5967F2A59676A00CF304B /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
-		7DA596812A59687A00CF304B /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
-		7DA596832A59696E00CF304B /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
-		7DA596852A59747F00CF304B /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
-		7DA596872A5979D000CF304B /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
-		7DA596892A59838700CF304B /* MapStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapStation.swift; sourceTree = "<group>"; };
-		7DA5968B2A598D1C00CF304B /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
-		7DA5968D2A59C78F00CF304B /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
+		7DA7A04E2A5AB39D0034AB45 /* MapManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
+		7DA7A0502A5AB39D0034AB45 /* MapStation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapStation.swift; sourceTree = "<group>"; };
+		7DA7A0512A5AB39D0034AB45 /* Annotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
+		7DA7A0542A5AB39D0034AB45 /* ListButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListButton.swift; sourceTree = "<group>"; };
+		7DA7A0562A5AB39D0034AB45 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		7DA7A0592A5AB39D0034AB45 /* LinesListManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinesListManager.swift; sourceTree = "<group>"; };
+		7DA7A05C2A5AB39D0034AB45 /* ListLineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListLineCell.swift; sourceTree = "<group>"; };
+		7DA7A05E2A5AB39D0034AB45 /* LineItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineItemCell.swift; sourceTree = "<group>"; };
+		7DA7A0602A5AB39D0034AB45 /* LinesListSpacingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinesListSpacingCell.swift; sourceTree = "<group>"; };
+		7DA7A0622A5AB39D0034AB45 /* LineItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineItem.swift; sourceTree = "<group>"; };
+		7DA7A0632A5AB39D0034AB45 /* LinesListSectionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinesListSectionType.swift; sourceTree = "<group>"; };
+		7DA7A0642A5AB39D0034AB45 /* LinesListSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinesListSection.swift; sourceTree = "<group>"; };
+		7DA7A0662A5AB39D0034AB45 /* LinesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinesListViewController.swift; sourceTree = "<group>"; };
+		7DA7A0762A5AB3C10034AB45 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		7DA7A0782A5AB3C10034AB45 /* BookingResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingResponse.swift; sourceTree = "<group>"; };
+		7DA7A0792A5AB3C10034AB45 /* StationsListResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationsListResponse.swift; sourceTree = "<group>"; };
+		7DA7A0852A5AB3CC0034AB45 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		7DA7A0862A5AB3CC0034AB45 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		7DA7A0882A5AB3CC0034AB45 /* GenericAlertDialogUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericAlertDialogUtils.swift; sourceTree = "<group>"; };
+		7DA7A0892A5AB3CC0034AB45 /* GenericAlertDialogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericAlertDialogView.swift; sourceTree = "<group>"; };
+		7DA7A0942A5AB3D40034AB45 /* VoltLinesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoltLinesTableViewCell.swift; sourceTree = "<group>"; };
+		7DA7A0952A5AB3D40034AB45 /* VoltLinesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoltLinesViewController.swift; sourceTree = "<group>"; };
+		7DA7A0982A5AB4BF0034AB45 /* WindowHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,13 +105,14 @@
 			isa = PBXGroup;
 			children = (
 				7DA596752A58B51E00CF304B /* App */,
-				7DA596742A58B51700CF304B /* Model */,
-				7DA596732A58B50F00CF304B /* Constants */,
-				7DA596722A58B50800CF304B /* Manager */,
-				7DA596712A58B4FF00CF304B /* View */,
-				7DA596702A58B4F800CF304B /* Scene */,
-				7DA5966E2A58B4EA00CF304B /* Resources */,
+				7DA7A0932A5AB3D40034AB45 /* Base */,
 				7DA5966D2A58B4E200CF304B /* Extensions */,
+				7DA7A07D2A5AB3CC0034AB45 /* Helper */,
+				7DA596722A58B50800CF304B /* Manager */,
+				7DA596742A58B51700CF304B /* Model */,
+				7DA5966E2A58B4EA00CF304B /* Resources */,
+				7DA596702A58B4F800CF304B /* Scene */,
+				7DA596712A58B4FF00CF304B /* View */,
 			);
 			path = "voltlines-case-study";
 			sourceTree = "<group>";
@@ -112,8 +137,9 @@
 		7DA596702A58B4F800CF304B /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				7D251F9F2A58B1230041E5EC /* ListTripVC.swift */,
-				7DA596872A5979D000CF304B /* MapVC.swift */,
+				7DA7A0662A5AB39D0034AB45 /* LinesListViewController.swift */,
+				7DA7A0562A5AB39D0034AB45 /* MapViewController.swift */,
+				7DA7A04C2A5AB39D0034AB45 /* Map */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -121,8 +147,8 @@
 		7DA596712A58B4FF00CF304B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7DA596782A59393900CF304B /* ListTripTableViewCell.swift */,
-				7DA596852A59747F00CF304B /* CustomButton.swift */,
+				7DA7A0542A5AB39D0034AB45 /* ListButton.swift */,
+				7DA7A05A2A5AB39D0034AB45 /* Cell */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -130,26 +156,23 @@
 		7DA596722A58B50800CF304B /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				7DA5967A2A594AF300CF304B /* APIManager.swift */,
-				7DA5968D2A59C78F00CF304B /* MapManager.swift */,
+				7DA7A0762A5AB3C10034AB45 /* APIManager.swift */,
+				7DA7A0592A5AB39D0034AB45 /* LinesListManager.swift */,
+				7DA7A04E2A5AB39D0034AB45 /* MapManager.swift */,
 			);
 			path = Manager;
-			sourceTree = "<group>";
-		};
-		7DA596732A58B50F00CF304B /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Constants;
 			sourceTree = "<group>";
 		};
 		7DA596742A58B51700CF304B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7DA5967F2A59676A00CF304B /* Station.swift */,
-				7DA596812A59687A00CF304B /* Trip.swift */,
-				7DA596892A59838700CF304B /* MapStation.swift */,
-				7DA5968B2A598D1C00CF304B /* Annotation.swift */,
+				7DA7A0622A5AB39D0034AB45 /* LineItem.swift */,
+				7DA7A0632A5AB39D0034AB45 /* LinesListSectionType.swift */,
+				7DA7A0642A5AB39D0034AB45 /* LinesListSection.swift */,
+				7DA7A0502A5AB39D0034AB45 /* MapStation.swift */,
+				7DA7A0512A5AB39D0034AB45 /* Annotation.swift */,
+				7DA7A0782A5AB3C10034AB45 /* BookingResponse.swift */,
+				7DA7A0792A5AB3C10034AB45 /* StationsListResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -160,9 +183,86 @@
 				7D251F9B2A58B1230041E5EC /* AppDelegate.swift */,
 				7D251FAC2A58B1240041E5EC /* Info.plist */,
 				7D251FA42A58B1230041E5EC /* voltlines_case_study.xcdatamodeld */,
-				7DA596832A59696E00CF304B /* Globals.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		7DA7A04C2A5AB39D0034AB45 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		7DA7A05A2A5AB39D0034AB45 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7DA7A05B2A5AB39D0034AB45 /* Line */,
+				7DA7A05D2A5AB39D0034AB45 /* List */,
+				7DA7A05F2A5AB39D0034AB45 /* Spacing */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		7DA7A05B2A5AB39D0034AB45 /* Line */ = {
+			isa = PBXGroup;
+			children = (
+				7DA7A05C2A5AB39D0034AB45 /* ListLineCell.swift */,
+			);
+			path = Line;
+			sourceTree = "<group>";
+		};
+		7DA7A05D2A5AB39D0034AB45 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				7DA7A05E2A5AB39D0034AB45 /* LineItemCell.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		7DA7A05F2A5AB39D0034AB45 /* Spacing */ = {
+			isa = PBXGroup;
+			children = (
+				7DA7A0602A5AB39D0034AB45 /* LinesListSpacingCell.swift */,
+			);
+			path = Spacing;
+			sourceTree = "<group>";
+		};
+		7DA7A07D2A5AB3CC0034AB45 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				7DA7A0982A5AB4BF0034AB45 /* WindowHelper.swift */,
+				7DA7A0842A5AB3CC0034AB45 /* Extensions */,
+				7DA7A0872A5AB3CC0034AB45 /* AlertDialog */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		7DA7A0842A5AB3CC0034AB45 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7DA7A0852A5AB3CC0034AB45 /* UIColor.swift */,
+				7DA7A0862A5AB3CC0034AB45 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7DA7A0872A5AB3CC0034AB45 /* AlertDialog */ = {
+			isa = PBXGroup;
+			children = (
+				7DA7A0882A5AB3CC0034AB45 /* GenericAlertDialogUtils.swift */,
+				7DA7A0892A5AB3CC0034AB45 /* GenericAlertDialogView.swift */,
+			);
+			path = AlertDialog;
+			sourceTree = "<group>";
+		};
+		7DA7A0932A5AB3D40034AB45 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				7DA7A0942A5AB3D40034AB45 /* VoltLinesTableViewCell.swift */,
+				7DA7A0952A5AB3D40034AB45 /* VoltLinesViewController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,20 +343,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DA5967B2A594AF300CF304B /* APIManager.swift in Sources */,
+				7DA7A06E2A5AB39D0034AB45 /* LineItemCell.swift in Sources */,
+				7DA7A0722A5AB39D0034AB45 /* LinesListSection.swift in Sources */,
+				7DA7A07B2A5AB3C10034AB45 /* BookingResponse.swift in Sources */,
+				7DA7A0922A5AB3CC0034AB45 /* GenericAlertDialogView.swift in Sources */,
 				7D251FA62A58B1230041E5EC /* voltlines_case_study.xcdatamodeld in Sources */,
-				7D251FA02A58B1230041E5EC /* ListTripVC.swift in Sources */,
-				7DA5968A2A59838700CF304B /* MapStation.swift in Sources */,
-				7DA5968E2A59C78F00CF304B /* MapManager.swift in Sources */,
-				7DA5968C2A598D1C00CF304B /* Annotation.swift in Sources */,
-				7DA596792A59393900CF304B /* ListTripTableViewCell.swift in Sources */,
-				7DA596862A59747F00CF304B /* CustomButton.swift in Sources */,
-				7DA596882A5979D000CF304B /* MapVC.swift in Sources */,
-				7DA596822A59687A00CF304B /* Trip.swift in Sources */,
 				7D251F9C2A58B1230041E5EC /* AppDelegate.swift in Sources */,
-				7DA596802A59676A00CF304B /* Station.swift in Sources */,
+				7DA7A06A2A5AB39D0034AB45 /* ListButton.swift in Sources */,
+				7DA7A0692A5AB39D0034AB45 /* Annotation.swift in Sources */,
+				7DA7A06C2A5AB39D0034AB45 /* LinesListManager.swift in Sources */,
+				7DA7A0962A5AB3D40034AB45 /* VoltLinesTableViewCell.swift in Sources */,
+				7DA7A0682A5AB39D0034AB45 /* MapStation.swift in Sources */,
+				7DA7A0912A5AB3CC0034AB45 /* GenericAlertDialogUtils.swift in Sources */,
 				7DA596772A58B55E00CF304B /* UIColor+Extensions.swift in Sources */,
-				7DA596842A59696E00CF304B /* Globals.swift in Sources */,
+				7DA7A06D2A5AB39D0034AB45 /* ListLineCell.swift in Sources */,
+				7DA7A0712A5AB39D0034AB45 /* LinesListSectionType.swift in Sources */,
+				7DA7A06F2A5AB39D0034AB45 /* LinesListSpacingCell.swift in Sources */,
+				7DA7A0992A5AB4BF0034AB45 /* WindowHelper.swift in Sources */,
+				7DA7A0702A5AB39D0034AB45 /* LineItem.swift in Sources */,
+				7DA7A0672A5AB39D0034AB45 /* MapManager.swift in Sources */,
+				7DA7A08F2A5AB3CC0034AB45 /* UIColor.swift in Sources */,
+				7DA7A0902A5AB3CC0034AB45 /* Extensions.swift in Sources */,
+				7DA7A0732A5AB39D0034AB45 /* LinesListViewController.swift in Sources */,
+				7DA7A07A2A5AB3C10034AB45 /* APIManager.swift in Sources */,
+				7DA7A07C2A5AB3C10034AB45 /* StationsListResponse.swift in Sources */,
+				7DA7A06B2A5AB39D0034AB45 /* MapViewController.swift in Sources */,
+				7DA7A0972A5AB3D40034AB45 /* VoltLinesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

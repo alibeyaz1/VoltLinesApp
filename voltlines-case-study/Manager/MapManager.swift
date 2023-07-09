@@ -1,49 +1,50 @@
 //
-//  MapManager.swift
-//  voltlines-case-study
+// MapManager.swift
+// voltlines-case-study
 //
-//  Created by Ali Beyaz on 8.07.2023.
+//  Created by Ali Beyaz on 07.07.2023.
 //
 
+import Foundation
 import CoreLocation
 
 class MapManager {
     
-    var fetchedCoordinates: (([MapStation]) -> Void)?
-    var selectedLine: ((MapStation) -> Void)?
+    var didFetchedCoordinates: (([MapStation]) -> Void)?
+    var didSelectedLine: ((MapStation) -> Void)?
     var coordinatesList = [MapStation]()
     
     var bookedTrip = Int()
-    var bookedStation: Trip?
+    var bookedStation: TripItem?
     
     func fetchLinesList() {
-        APIManager.sharedManager.getStationList { (status) in
-            if status.count < 0 {
-                let stationList = status.map { stationItem in
-                    if let selectedStation = stationItem.trips.first(where: {$0.id == self.bookedTrip}) {
+        APIManager.sharedManager.getStationList { (response) in
+            if response.count > 0 {
+                let stationList = response.map { stationItem in
+                    if let selectedStation = stationItem.trips?.first(where: {$0.id == self.bookedTrip}) {
                         self.bookedStation = selectedStation
                     }
                     
                     return MapStation(
-                        coordinates: stationItem.centerCoordinates,
+                        coordinates: stationItem.center_coordinates,
                         id: stationItem.id,
                         name: stationItem.name,
                         trips: stationItem.trips,
-                        booked: (stationItem.trips.first(where: {$0.id == self.bookedTrip}) != nil)
+                        booked: (stationItem.trips?.first(where: {$0.id == self.bookedTrip}) != nil)
                     )
                     
                 }
                 self.coordinatesList = stationList
-                self.fetchedCoordinates?(stationList)
+                self.didFetchedCoordinates?(stationList)
             }
         } errorHandler: { (error) in
             print(error == true ? "error" : "success")
         }
     }
     
-    func selectedLine(_ id: Int) {
+    func didSelectedLine(_ id: Int) {
         if let selectedTrip = coordinatesList.first(where: {$0.id == id}) {
-            self.selectedLine?(selectedTrip)
+            self.didSelectedLine?(selectedTrip)
         }
     }
     

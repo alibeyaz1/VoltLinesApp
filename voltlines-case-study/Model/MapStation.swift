@@ -1,6 +1,6 @@
 //
 //  MapStation.swift
-//  voltlines-case-study
+// voltlines-case-study
 //
 //  Created by Ali Beyaz on 8.07.2023.
 //
@@ -11,15 +11,11 @@ struct MapStation {
     var coordinates: String?
     var id: Int?
     var name: String?
-    var trips: [Trip]?
+    var trips: [TripItem]?
     var booked: Bool?
     
     var tripInfo: String {
         let tripCount = trips?.count.string ?? ""
         return tripCount == "" ? "" : String(format: "%@ Trips", tripCount)
     }
-}
-
-extension LosslessStringConvertible {
-    var string: String { .init(self) }
 }
