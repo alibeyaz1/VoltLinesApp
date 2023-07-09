@@ -8,6 +8,10 @@
 import UIKit
 import SnapKit
 
+protocol ListTripVCDelegate: AnyObject {
+    func didBookedTrip(_ id: Int)
+}
+
 class ListTripVC: UIViewController {
     let tableView = UITableView()
     var data: [String] = ["Bus 1", "Bus 2", "Bus 3"]

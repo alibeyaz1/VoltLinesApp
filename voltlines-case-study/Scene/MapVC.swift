@@ -28,7 +28,8 @@ class MapVC : UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        //        addAnnotations()
+        checkLocationPermissions()
+        initPresenter()
     }
     
     private func setupUI() {
@@ -125,122 +126,124 @@ extension MapVC {
                     image: station.booked == true ? UIImage(named: "SelectedPoint") : UIImage(named: "Point"),
                     identifier: station.id ?? 0,
                     coordinate: location)
-                    mapView.addAnnotation(annotation)
-                    }
-                    }
-                    if bookedRouteId != 0 {
-                        routeDraw(userLat, long: userLong)
-                    }
-                    }
-                    
-                    private func routeDraw(_ lat: Double, long: Double) {
-                        let userLocation = CLLocation(latitude: userLat, longitude: userLong)
-                        let stationLoc = mapManager.fetchSelectedStationCoords(bookedRouteId)
-                        
-                        let userLocation2D = CLLocationCoordinate2D(latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude)
-                        let stationLocation2D = CLLocationCoordinate2D(latitude: Double(stationLoc.coordinate.latitude), longitude: Double(stationLoc.coordinate.longitude))
-                        
-                        var distance = userLocation.distance(from: stationLoc)
-                        if distance > 1000 {
-                            distance = distance / 1000
-                            let value = String(distance)
-                            let result = String(value.prefix(5))
-                            //            self.infoLabel.text = "\(result) km"
-                        }
-                        else {
-                            let value = String(distance)
-                            let result = String(value.prefix(5))
-                            //            self.infoLabel.text = "\(result) m"
-                        }
-                        
-                        let sourcePlaceMark = MKPlacemark(coordinate: userLocation2D, addressDictionary: nil)
-                        let stationPlaceMark = MKPlacemark(coordinate: stationLocation2D, addressDictionary: nil)
-                        
-                        let stationAnotation = MKPointAnnotation()
-                        if let stationLoc = stationPlaceMark.location {
-                            stationAnotation.coordinate = stationLoc.coordinate
-                        }
-                        
-                        self.mapView.addAnnotation(stationAnotation)
-                        
-                        let directionRequest = MKDirections.Request()
-                        directionRequest.source = MKMapItem(placemark: sourcePlaceMark)
-                        directionRequest.destination = MKMapItem(placemark: stationPlaceMark)
-                        directionRequest.transportType = .any
-                        
-                        let directions = MKDirections(request: directionRequest)
-                        directions.calculate { (response, error) in
-                            guard let directionResponse = response else {
-                                if let error = error {
-                                    print("Error : \(error.localizedDescription)")
-                                }
-                                return
-                            }
-                            let route = directionResponse.routes[0]
-                            self.mapView.addOverlay((route.polyline), level: .aboveRoads)
-                            
-                            let rect = route.polyline.boundingMapRect
-                            self.mapView.setRegion(MKCoordinateRegion(rect), animated: true)
-                        }
-                    }
-                    }
-                    
-                    extension MapVC: CLLocationManagerDelegate {
-                        func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-                            let currentLocation: CLLocation = locations[locations.count - 1]
-                            let lat = currentLocation.coordinate.latitude
-                            let long = currentLocation.coordinate.longitude
-                            self.userLat = lat
-                            self.userLong = long
-                            setLocation(CLLocation(latitude: lat, longitude: long))
-                            locationManager.stopUpdatingLocation()
-                        }
-                    }
-                    
-                    extension MapVC: MKMapViewDelegate {
-                        func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-                            if let annotation = view.annotation as? Annotation {
-                                let identifier = annotation.identifier ?? 0
-                                self.routeId = identifier
-                                self.listButton.showButton()
-                            }
-                        }
-                        
-                        func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-                            guard let annotation = annotation as? Annotation else { return nil }
-                            let reuseIdentifier = "customAnnotation"
-                            var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseIdentifier)
-                            if annotationView == nil {
-                                annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseIdentifier)
-                                annotationView?.canShowCallout = true
-                            } else {
-                                annotationView?.annotation = annotation
-                            }
-                            annotationView?.image = annotation.image
-                            return annotationView
-                        }
-                        
-                        func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-                            self.listButton.hideButton()
-                        }
-                        
-                        func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-                            let renderer = MKPolylineRenderer(overlay: overlay)
-                            renderer.strokeColor = UIColor.lightGray
-                            renderer.lineWidth = 4.0
-                            return renderer
-                        }
-                    }
-                    
-//                    extension MapVC: ListButtonDelegate {
-//                        func didTappedListButton() {
-//                            self.presenter.didSelectedLine(routeId)
-//                        }
-//                    }
-//
-//                    extension MapVC: LinesListViewControllerDelegate {
-//                        func didBookedTrip(_ id: Int) {
-//                            self.bookedRoute = id
-//                            self.presenter.fetchLinesList()
-//                        }
-                    
+                mapView.addAnnotation(annotation)
+            }
+        }
+        if bookedRouteId != 0 {
+            routeDraw(userLat, long: userLong)
+        }
+    }
+    
+    private func routeDraw(_ lat: Double, long: Double) {
+        let userLocation = CLLocation(latitude: userLat, longitude: userLong)
+        let stationLoc = mapManager.fetchSelectedStationCoords(bookedRouteId)
+        
+        let userLocation2D = CLLocationCoordinate2D(latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude)
+        let stationLocation2D = CLLocationCoordinate2D(latitude: Double(stationLoc.coordinate.latitude), longitude: Double(stationLoc.coordinate.longitude))
+        
+        var distance = userLocation.distance(from: stationLoc)
+        if distance > 1000 {
+            distance = distance / 1000
+            let value = String(distance)
+            let result = String(value.prefix(5))
+            //            self.infoLabel.text = "\(result) km"
+        }
+        else {
+            let value = String(distance)
+            let result = String(value.prefix(5))
+            //            self.infoLabel.text = "\(result) m"
+        }
+        
+        let sourcePlaceMark = MKPlacemark(coordinate: userLocation2D, addressDictionary: nil)
+        let stationPlaceMark = MKPlacemark(coordinate: stationLocation2D, addressDictionary: nil)
+        
+        let stationAnotation = MKPointAnnotation()
+        if let stationLoc = stationPlaceMark.location {
+            stationAnotation.coordinate = stationLoc.coordinate
+        }
+        
+        self.mapView.addAnnotation(stationAnotation)
+        
+        let directionRequest = MKDirections.Request()
+        directionRequest.source = MKMapItem(placemark: sourcePlaceMark)
+        directionRequest.destination = MKMapItem(placemark: stationPlaceMark)
+        directionRequest.transportType = .any
+        
+        let directions = MKDirections(request: directionRequest)
+        directions.calculate { (response, error) in
+            guard let directionResponse = response else {
+                if let error = error {
+                    print("Error : \(error.localizedDescription)")
+                }
+                return
+            }
+            let route = directionResponse.routes[0]
+            self.mapView.addOverlay((route.polyline), level: .aboveRoads)
+            
+            let rect = route.polyline.boundingMapRect
+            self.mapView.setRegion(MKCoordinateRegion(rect), animated: true)
+        }
+    }
+}
+
+extension MapVC: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let currentLocation: CLLocation = locations[locations.count - 1]
+        let lat = currentLocation.coordinate.latitude
+        let long = currentLocation.coordinate.longitude
+        self.userLat = lat
+        self.userLong = long
+        setLocation(CLLocation(latitude: lat, longitude: long))
+        locationManager.stopUpdatingLocation()
+    }
+}
+
+extension MapVC: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        if let annotation = view.annotation as? Annotation {
+            let identifier = annotation.identifier ?? 0
+            self.routeId = identifier
+            self.listButton.showButton()
+        }
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard let annotation = annotation as? Annotation else { return nil }
+        let reuseIdentifier = "customAnnotation"
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseIdentifier)
+        if annotationView == nil {
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseIdentifier)
+            annotationView?.canShowCallout = true
+        } else {
+            annotationView?.annotation = annotation
+        }
+        annotationView?.image = annotation.image
+        return annotationView
+    }
+    
+    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+        self.listButton.hideButton()
+    }
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let renderer = MKPolylineRenderer(overlay: overlay)
+        renderer.strokeColor = UIColor.lightGray
+        renderer.lineWidth = 4.0
+        return renderer
+    }
+}
+
+extension MapVC: CustomButtonDelegate {
+    func didTappedListButton() {
+        self.mapManager.selectedLine(routeId)
+    }
+}
+
+extension MapVC: ListTripVCDelegate {
+    func didBookedTrip(_ id: Int) {
+        self.bookedRouteId = id
+        self.mapManager.fetchLinesList()
+    }
+}
+
+

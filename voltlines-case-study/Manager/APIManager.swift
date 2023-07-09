@@ -46,7 +46,7 @@ class APIManager {
                 do {
                     let responseArray = try JSONDecoder().decode(Trip.self, from: data)
                     success(responseArray)
-                    print(responseArray.idBus)
+                    print(responseArray.id)
                 } catch  {
                     errorHandler(true)
                 }

@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict/>
+<dict>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Uygulama, size yakındaki konumları bulmak için konum verilerinizi hem her zaman hem de kullanım sırasında kullanır.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Uygulama, size yakındaki konumları bulmak için konumunuzu kullanır.</string>
+</dict>
 </plist>

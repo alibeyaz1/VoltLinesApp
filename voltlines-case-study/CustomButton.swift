@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol CustomButtonDelegate: AnyObject {
+    func didTappedListButton()
+}
+
+
 class CustomButton: UIButton {
         private let title: String?
         
