@@ -36,15 +36,21 @@ class LinesListManager {
     func bookSelectedTrip(_ id: Int) {
         // Book a selected trip using the API manager
         APIManager.sharedManager.bookingTrip(route: selectedTrips.id ?? 0, station: id) { (response) in
-            if let id = response.id, id != 0 {
+            if let id = response.id, id != 400 {
                 self.didBookedTrip?(id) // Notify successful booking
+            }
+            else {
+                self.didFailedBookTrip?() // Notify failed booking
+                
             }
         } errorHandler: { (error) in
             self.didFailedBookTrip?() // Notify failed booking
+            
+            //        } errorHandler: { (error) in
+            //        }
         }
     }
 }
-
 extension LinesListManager {
     func rowCount(_ section: Int) -> Int{
         let data = self.sectionListSource[section]
